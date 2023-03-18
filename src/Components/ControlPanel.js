@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './ControlPanel.css';
 
 function ControlPanel(props) {
@@ -9,6 +9,7 @@ function ControlPanel(props) {
         const newValue = event.target.value;
         setValue(newValue);
         props.onValueChange(newValue);
+        console.log(value);
     }  
     return (
         <div className='master-control'>
