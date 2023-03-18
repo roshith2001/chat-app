@@ -4,10 +4,15 @@ import './ChatArea.css';
 
 
 function ChatArea(props) {
+    const bubbleText = props.messageArray;
+    console.log(bubbleText)
     return (
         <div className='master-container'>
             <div className='containerChat'>
-                <ChatBubble id="1" message="This is working fine"/>                  
+                {bubbleText.map((message, index) => (
+                    <ChatBubble text={message.text}/>
+                ))}
+                                  
             </div>
         </div>
     );

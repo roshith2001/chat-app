@@ -18,7 +18,7 @@ function ChatBubble(props) {
     return (
         <div className='bubbleContainer'>
             <div className='chat-bubble sent'>
-                    {props.message}
+                    {props.text}
                     <div className='time-stamp'>{time.toLocaleTimeString()}</div>
             </div>
         </div>
