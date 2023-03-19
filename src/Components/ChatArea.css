@@ -24,13 +24,13 @@
     justify-content: center;
     overflow: auto;
     position: absolute;
-    top: 12vh;
-    bottom: 13vh;
+    top: 10%;
+    bottom: 10%;
 }
 .containerChat{
     width: 100%;
     height: auto;
-    min-height: 75vh;
+    min-height: 75%;
     display: flex;
     flex-direction: column;
     background-color: var(--cool-white);
