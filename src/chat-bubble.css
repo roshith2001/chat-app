@@ -1,5 +1,6 @@
 .chat-bubble{
-    width: 50%;
+    width: fit-content;
+    max-width: 75%;
     display: inline-block;
     margin: 15px;
     padding: 15px;
@@ -14,7 +15,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    right: -20px;
+    right: -15px;
     transform: translateY(-50%);
     border-width: 10px;
     border-style: solid;
@@ -27,11 +28,11 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: -20px;
+    left: -15px;
     transform: translateY(-50%);
     border-width: 10px;
     border-style: solid;
-    border-color: transparent var(--navy-blue) transparent transparent ;;
+    border-color: transparent var(--grey) transparent transparent ;;
 }
 
 .chat-bubble.receive{

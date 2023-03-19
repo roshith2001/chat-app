@@ -19,50 +19,23 @@
 }
 .master-container{
     width: 100%;
-    height: 175vh;
+    overflow: scroll;
     display: flex;
     justify-content: center;
     overflow: auto;
     position: absolute;
     top: 12vh;
+    bottom: 13vh;
 }
 .containerChat{
     width: 100%;
-    height: inherit;
+    height: auto;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
     background-color: var(--cool-white);
-}
-.chat-bubble{
-    width: 50%;
-    display: inline-block;
-    margin: 15px;
-    padding: 15px;
-    background-color: var(--grey);
-    position: relative;
-    border-radius: 5px;
-}
-.chat-bubble.sent::after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -15px;
-    transform: translateY(-50%);
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent transparent transparent var(--grey);;
-}
-.chat-bubble.receive::after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -15px;
-    transform: translateY(-50%);
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent var(--grey) transparent transparent ;;
-}
-
-.chat-bubble.receive{
-    float: left;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 @media screen and (min-width: 768px){
     .containerChat{

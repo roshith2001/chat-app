@@ -3,7 +3,6 @@ import './chat-bubble.css';
 
 function ChatBubble(props) {
     const [time, setTime] = useState(new Date());
-
     useEffect (() => {
         const intervelId = setInterval(() => {
             setTime(new Date());
@@ -17,7 +16,7 @@ function ChatBubble(props) {
 
     return (
         <div className='bubbleContainer'>
-            <div className='chat-bubble sent'>
+            <div className={(props.classToUse?'chat-bubble sent':'chat-bubble receive')}>
                     {props.text}
                     <div className='time-stamp'>{time.toLocaleTimeString()}</div>
             </div>
