@@ -10,8 +10,7 @@ function App() {
   const[value, setValue] = useState('');
   const [inputStatus, setInputStatus] = useState(true);
   const [whoIsChatting, setWhoIsChatting] = useState(true);
-  const[nameForClass, setNameForClass] = useState('chat-bubble sent');
-
+  
   const changeValue = (newValue) => {
     setValue(newValue);
   }
