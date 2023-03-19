@@ -1,6 +1,7 @@
 import Header from "./Components/Header";
 import ChatArea from "./Components/ChatArea";
 import ControlPanel from "./Components/ControlPanel";
+import DetailCollection from "./Components/DetailCollection";
 import { useState } from "react";
 
 
@@ -10,6 +11,7 @@ function App() {
   const[value, setValue] = useState('');
   const [inputStatus, setInputStatus] = useState(true);
   const [whoIsChatting, setWhoIsChatting] = useState(true);
+  const [nameValue, setNameValue] = useState('')
   
   const changeValue = (newValue) => {
     setValue(newValue);
@@ -30,12 +32,15 @@ function App() {
     setWhoIsChatting(!whoIsChatting);
     
   }
-  
-  
+  const handleSubmit = (value) => {
+    setNameValue(value);
+  }
+  const Name = nameValue.toUpperCase()
 
   return (
     <div>
-      <Header pName="Saghav Pinarayi vijayan" status= {inputStatus?"Click on the share arrow below to reverse the sender":"typing..."} 
+      <DetailCollection onSubmit={handleSubmit}/>
+      <Header pName={Name} status= {inputStatus?"Click on the share arrow below to reverse the sender":"typing..."} 
       img="https://img.freepik.com/free-photo/portrait-white-man-
       isolated_53876-40306.jpg"/>
       <ChatArea messageArray = {messages} whoIsSending={whoIsChatting}/>
